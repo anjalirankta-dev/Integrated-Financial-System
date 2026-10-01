@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Transaction Confirmation - Integrated Financial System</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">🏦</div>
+
+            <h1>Integrated</h1>
+            <p>Financial System</p>
+
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="bank-dashboard.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="customer-management.html">
+                👥 Customer Management
+            </a>
+
+            <a href="view-account.html" class="active">
+                💳 Account Management
+            </a>
+
+            <a href="#">
+                💰 Transaction Management
+            </a>
+
+            <a href="#">
+                📋 Requests
+            </a>
+
+            <a href="#">
+                📊 Reports
+            </a>
+
+            <a href="#">
+                👤 Profile
+            </a>
+
+            <a href="../index.html">
+                🚪 Logout
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="top-search">
+                🔍
+                <input
+                    type="text"
+                    placeholder="Search customer, account..."
+                >
+            </div>
+
+            <div class="employee-info">
+
+                <span class="notification">🔔</span>
+
+                <div class="employee-avatar">
+                    P
+                </div>
+
+                <div>
+                    <strong>Priya Sharma</strong>
+                    <small>Bank Employee</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE HEADER -->
+
+        <section class="page-header">
+
+            <div>
+
+                <h2>Confirm Transaction</h2>
+
+                <p>
+                    Review the transaction details before confirming.
+                </p>
+
+            </div>
+
+            <a href="perform-action.html"
+               class="back-button">
+
+                ← Back to Perform Action
+
+            </a>
+
+        </section>
+
+
+        <!-- ================= CONFIRMATION CARD ================= -->
+
+        <section class="confirmation-card">
+
+            <div class="confirmation-title">
+
+                <div class="confirmation-icon">
+                    ✓
+                </div>
+
+                <div>
+
+                    <h2>Transaction Confirmation</h2>
+
+                    <p>
+                        Please verify all information carefully.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CUSTOMER DETAILS -->
+
+            <div class="details-section">
+
+                <h3>Customer Information</h3>
+
+                <div class="details-grid">
+
+                    <div class="detail-item">
+
+                        <span>Customer Name</span>
+
+                        <strong>Rahul Sharma</strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Customer ID</span>
+
+                        <strong>C001</strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Account Number</span>
+
+                        <strong>10010001</strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Account Type</span>
+
+                        <strong>Savings Account</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TRANSACTION DETAILS -->
+
+            <div class="details-section">
+
+                <h3>Transaction Details</h3>
+
+                <div class="details-grid">
+
+                    <div class="detail-item">
+
+                        <span>Transaction Type</span>
+
+                        <strong>Deposit</strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Amount</span>
+
+                        <strong class="amount">
+                            ₹10,000
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Transaction Date</span>
+
+                        <strong>01 October 2026</strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Transaction Description</span>
+
+                        <strong>
+                            Cash deposit by customer
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- WARNING -->
+
+            <div class="confirmation-warning">
+
+                ⚠️
+
+                <div>
+
+                    <strong>Important</strong>
+
+                    <p>
+                        Please make sure that the customer,
+                        account and transaction details are correct.
+                        Once confirmed, the transaction will be processed.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTION BUTTONS -->
+
+            <div class="confirmation-actions">
+
+                <a
+                    href="perform-action.html"
+                    class="cancel-button">
+
+                    ← Edit Transaction
+
+                </a>
+
+
+                <button
+                    type="button"
+                    class="confirm-button"
+                    id="confirmTransaction">
+
+                    ✓ Confirm Transaction
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="../js/confirmation.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Perform Action - Integrated Financial System</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            🏦
+            <h2>Integrated</h2>
+            <p>Financial System</p>
+        </div>
+
+        <nav>
+
+            <a href="bank-dashboard.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="customer-management.html">
+                👥 Customer Management
+            </a>
+
+            <a href="view-account.html">
+                💳 Account Management
+            </a>
+
+            <a href="perform-action.html" class="active">
+                💰 Transaction Management
+            </a>
+
+            <a href="#">
+                📋 Requests
+            </a>
+
+            <a href="#">
+                📊 Reports
+            </a>
+
+            <a href="#">
+                👤 Profile
+            </a>
+
+            <a href="../index.html">
+                🚪 Logout
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="search-box">
+                🔍
+                <input
+                    type="text"
+                    placeholder="Search customer, account..."
+                >
+            </div>
+
+            <div class="employee-info">
+
+                <span>🔔</span>
+
+                <div class="profile-circle">
+                    P
+                </div>
+
+                <div>
+                    <strong>Priya Sharma</strong>
+                    <small>Bank Employee</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE HEADER -->
+
+        <section class="page-header">
+
+            <div>
+
+                <h1>Perform Action</h1>
+
+                <p>
+                    Perform banking operations for the selected account.
+                </p>
+
+            </div>
+
+            <button
+                class="secondary-button"
+                onclick="goBack()">
+
+                ← Back to Account
+
+            </button>
+
+        </section>
+
+
+        <!-- ACCOUNT SUMMARY -->
+
+        <section class="account-summary">
+
+            <div class="account-icon">
+                💳
+            </div>
+
+            <div class="account-details">
+
+                <h2>Rahul Sharma</h2>
+
+                <p>
+                    Account Number:
+                    <strong id="accountNumber">
+                        10010001
+                    </strong>
+                </p>
+
+                <span class="status active-status">
+                    Active
+                </span>
+
+            </div>
+
+            <div class="balance-section">
+
+                <small>Available Balance</small>
+
+                <h2 id="currentBalance">
+                    ₹50,000
+                </h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTION SECTION -->
+
+        <section class="action-section">
+
+            <div class="section-title">
+
+                <h2>Choose an Action</h2>
+
+                <p>
+                    Select the banking operation you want to perform.
+                </p>
+
+            </div>
+
+
+            <div class="action-grid">
+
+
+                <!-- DEPOSIT -->
+
+                <div
+                    class="action-card"
+                    onclick="openAction('deposit')">
+
+                    <div class="action-icon deposit-icon">
+                        💰
+                    </div>
+
+                    <h3>Deposit</h3>
+
+                    <p>
+                        Add money to the customer's account.
+                    </p>
+
+                    <button class="action-button">
+                        Deposit Money →
+                    </button>
+
+                </div>
+
+
+                <!-- WITHDRAW -->
+
+                <div
+                    class="action-card"
+                    onclick="openAction('withdraw')">
+
+                    <div class="action-icon withdraw-icon">
+                        💸
+                    </div>
+
+                    <h3>Withdraw</h3>
+
+                    <p>
+                        Withdraw money from the customer's account.
+                    </p>
+
+                    <button class="action-button">
+                        Withdraw Money →
+                    </button>
+
+                </div>
+
+
+                <!-- TRANSFER -->
+
+                <div
+                    class="action-card"
+                    onclick="openAction('transfer')">
+
+                    <div class="action-icon transfer-icon">
+                        🔄
+                    </div>
+
+                    <h3>Transfer</h3>
+
+                    <p>
+                        Transfer money to another account.
+                    </p>
+
+                    <button class="action-button">
+                        Transfer Money →
+                    </button>
+
+                </div>
+
+
+                <!-- HISTORY -->
+
+                <div
+                    class="action-card"
+                    onclick="openHistory()">
+
+                    <div class="action-icon history-icon">
+                        📋
+                    </div>
+
+                    <h3>Transaction History</h3>
+
+                    <p>
+                        View previous transactions of this account.
+                    </p>
+
+                    <button class="action-button">
+                        View History →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTION FORM -->
+
+        <section
+            class="transaction-form-section"
+            id="transactionSection"
+            style="display:none;">
+
+            <div class="form-header">
+
+                <div>
+
+                    <h2 id="actionTitle">
+                        Deposit Money
+                    </h2>
+
+                    <p id="actionDescription">
+                        Enter transaction details.
+                    </p>
+
+                </div>
+
+                <button
+                    class="close-button"
+                    onclick="closeAction()">
+
+                    ✕
+
+                </button>
+
+            </div>
+
+
+            <form id="transactionForm">
+
+                <!-- Amount -->
+
+                <div class="form-group">
+
+                    <label>
+                        Amount
+                    </label>
+
+                    <div class="amount-input">
+
+                        <span>₹</span>
+
+                        <input
+                            type="number"
+                            id="amount"
+                            placeholder="Enter amount"
+                            min="1"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Transfer Account -->
+
+                <div
+                    class="form-group"
+                    id="transferAccountGroup"
+                    style="display:none;">
+
+                    <label>
+                        Receiver Account Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="receiverAccount"
+                        placeholder="Enter receiver account number"
+                    >
+
+                </div>
+
+
+                <!-- Description -->
+
+                <div class="form-group">
+
+                    <label>
+                        Description
+                    </label>
+
+                    <textarea
+                        id="description"
+                        placeholder="Enter transaction description"
+                        rows="4"
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Buttons -->
+
+                <div class="form-buttons">
+
+                    <button
+                        type="button"
+                        class="cancel-button"
+                        onclick="closeAction()">
+
+                        Cancel
+
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="primary-button">
+
+                        Continue →
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- CONFIRMATION -->
+
+        <section
+            class="confirmation-section"
+            id="confirmationSection"
+            style="display:none;">
+
+            <div class="confirmation-icon">
+                ⚠️
+            </div>
+
+            <h2>Confirm Transaction</h2>
+
+            <p>
+                Please verify the transaction details before continuing.
+            </p>
+
+
+            <div class="confirmation-details">
+
+                <div>
+                    <span>Transaction Type</span>
+                    <strong id="confirmType">
+                        Deposit
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Account Number</span>
+                    <strong>
+                        10010001
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Amount</span>
+                    <strong id="confirmAmount">
+                        ₹0
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Description</span>
+                    <strong id="confirmDescription">
+                        -
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="confirmation-buttons">
+
+                <button
+                    class="cancel-button"
+                    onclick="cancelConfirmation()">
+
+                    ← Go Back
+
+                </button>
+
+                <button
+                    class="primary-button"
+                    onclick="confirmTransaction()">
+
+                    Confirm Transaction
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- SUCCESS / UPDATED DATA -->
+
+        <section
+            class="success-section"
+            id="successSection"
+            style="display:none;">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>Transaction Successful</h2>
+
+            <p>
+                The account has been successfully updated.
+            </p>
+
+
+            <div class="updated-balance">
+
+                <span>Updated Account Balance</span>
+
+                <strong id="updatedBalance">
+                    ₹50,000
+                </strong>
+
+            </div>
+
+
+            <div class="transaction-success-details">
+
+                <p>
+                    Transaction ID:
+                    <strong id="transactionId"></strong>
+                </p>
+
+                <p>
+                    Status:
+                    <span class="success-status">
+                        Completed
+                    </span>
+                </p>
+
+            </div>
+
+
+            <button
+                class="primary-button"
+                onclick="resetPage()">
+
+                Done
+
+            </button>
+
+        </section>
+
+
+        <!-- TRANSACTION HISTORY -->
+
+        <section
+            class="history-section"
+            id="historySection"
+            style="display:none;">
+
+            <div class="section-title">
+
+                <h2>Transaction History</h2>
+
+                <p>
+                    Previous transactions for account
+                    10010001.
+                </p>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Transaction ID
+                            </th>
+
+                            <th>
+                                Type
+                            </th>
+
+                            <th>
+                                Amount
+                            </th>
+
+                            <th>
+                                Description
+                            </th>
+
+                            <th>
+                                Date
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="transactionTable">
+
+                        <!-- JavaScript will add rows -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/perform-action.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Details - Integrated Financial System</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+</head>
+
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-logo">
+
+        <div class="bank-logo">
+            🏦
+        </div>
+
+        <h2>Integrated</h2>
+
+        <span>Financial System</span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="bank-dashboard.html"
+           class="menu-item">
+
+            🏠
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <a href="customer-management.html"
+           class="menu-item active">
+
+            👥
+            <span>Customer Management</span>
+
+        </a>
+
+
+        <a href="#"
+           class="menu-item">
+
+            💳
+            <span>Account Management</span>
+
+        </a>
+
+
+        <a href="#"
+           class="menu-item">
+
+            💰
+            <span>Transaction Management</span>
+
+        </a>
+
+
+        <a href="#"
+           class="menu-item">
+
+            📋
+            <span>Requests</span>
+
+        </a>
+
+
+        <a href="#"
+           class="menu-item">
+
+            📊
+            <span>Reports</span>
+
+        </a>
+
+
+        <a href="#"
+           class="menu-item">
+
+            👤
+            <span>Profile</span>
+
+        </a>
+
+
+        <a href="../index.html"
+           class="menu-item logout">
+
+            🚪
+            <span>Logout</span>
+
+        </a>
+
+    </nav>
+
+</aside>
+
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="main-content">
+
+
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+
+
+        <div class="search-box">
+
+            🔍
+
+            <input
+                type="text"
+                placeholder="Search customer, account..."
+            >
+
+        </div>
+
+
+        <div class="employee-info">
+
+            <div class="notification">
+                🔔
+            </div>
+
+
+            <div class="employee-avatar">
+                P
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Priya Sharma
+                </strong>
+
+                <small>
+                    Bank Employee
+                </small>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="page-header">
+
+
+        <div>
+
+            <h1>
+                Customer Details
+            </h1>
+
+            <p>
+                View customer information and accounts.
+            </p>
+
+        </div>
+
+
+        <button
+            class="secondary-btn"
+            onclick="goBack()">
+
+            ← Back to Customers
+
+        </button>
+
+    </section>
+
+
+
+    <!-- ================= CUSTOMER PROFILE ================= -->
+
+    <section class="dashboard-card">
+
+
+        <div class="customer-profile-header">
+
+
+            <div class="large-avatar">
+                R
+            </div>
+
+
+            <div>
+
+                <h2>
+                    Rahul Sharma
+                </h2>
+
+                <p>
+                    Customer ID: C001
+                </p>
+
+                <span class="status completed">
+                    Active
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="customer-details-grid">
+
+
+            <div class="detail-item">
+
+                <span>
+                    Full Name
+                </span>
+
+                <strong>
+                    Rahul Sharma
+                </strong>
+
+            </div>
+
+
+            <div class="detail-item">
+
+                <span>
+                    Customer ID
+                </span>
+
+                <strong>
+                    C001
+                </strong>
+
+            </div>
+
+
+            <div class="detail-item">
+
+                <span>
+                    Phone Number
+                </span>
+
+                <strong>
+                    9876543210
+                </strong>
+
+            </div>
+
+
+            <div class="detail-item">
+
+                <span>
+                    Email Address
+                </span>
+
+                <strong>
+                    rahul@gmail.com
+                </strong>
+
+            </div>
+
+
+            <div class="detail-item">
+
+                <span>
+                    Date of Birth
+                </span>
+
+                <strong>
+                    15 June 2002
+                </strong>
+
+            </div>
+
+
+            <div class="detail-item">
+
+                <span>
+                    Address
+                </span>
+
+                <strong>
+                    Dehradun, Uttarakhand
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ACCOUNTS ================= -->
+
+    <section class="dashboard-card">
+
+
+        <div class="card-header">
+
+            <div>
+
+                <h2>
+                    Customer Accounts
+                </h2>
+
+                <p>
+                    Accounts associated with this customer.
+                </p>
+
+            </div>
+
+
+            <button
+                class="primary-btn"
+                onclick="openAccount()">
+
+                + Open Account
+
+            </button>
+
+        </div>
+
+
+
+        <div class="account-card">
+
+
+            <div class="account-icon">
+                💳
+            </div>
+
+
+            <div class="account-info">
+
+                <h3>
+                    Savings Account
+                </h3>
+
+                <p>
+                    Account Number: 10010001
+                </p>
+
+                <span class="status completed">
+                    Active
+                </span>
+
+            </div>
+
+
+            <div class="account-balance">
+
+                <span>
+                    Available Balance
+                </span>
+
+                <strong>
+                    ₹50,000
+                </strong>
+
+            </div>
+
+
+            <button
+                class="view-account-btn"
+                onclick="viewAccount()">
+
+                View Account
+
+            </button>
+
+        </div>
+
+
+
+        <div class="account-card">
+
+
+            <div class="account-icon">
+                💳
+            </div>
+
+
+            <div class="account-info">
+
+                <h3>
+                    Current Account
+                </h3>
+
+                <p>
+                    Account Number: 10010002
+                </p>
+
+                <span class="status completed">
+                    Active
+                </span>
+
+            </div>
+
+
+            <div class="account-balance">
+
+                <span>
+                    Available Balance
+                </span>
+
+                <strong>
+                    ₹1,20,000
+                </strong>
+
+            </div>
+
+
+            <button
+                class="view-account-btn"
+                onclick="viewAccount()">
+
+                View Account
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= RECENT TRANSACTIONS ================= -->
+
+    <section class="dashboard-card">
+
+
+        <div class="card-header">
+
+            <div>
+
+                <h2>
+                    Recent Transactions
+                </h2>
+
+                <p>
+                    Latest transactions of this customer.
+                </p>
+
+            </div>
+
+
+            <button
+                class="view-all-btn">
+
+                View All
+
+            </button>
+
+        </div>
+
+
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Date
+                    </th>
+
+                    <th>
+                        Description
+                    </th>
+
+                    <th>
+                        Type
+                    </th>
+
+                    <th>
+                        Amount
+                    </th>
+
+                    <th>
+                        Status
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <tr>
+
+                    <td>
+                        01 Oct 2026
+                    </td>
+
+                    <td>
+                        Salary Credit
+                    </td>
+
+                    <td>
+                        Credit
+                    </td>
+
+                    <td class="credit">
+                        +₹25,000
+                    </td>
+
+                    <td>
+
+                        <span class="status completed">
+                            Completed
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        30 Sep 2026
+                    </td>
+
+                    <td>
+                        UPI Payment
+                    </td>
+
+                    <td>
+                        Debit
+                    </td>
+
+                    <td class="debit">
+                        -₹1,500
+                    </td>
+
+                    <td>
+
+                        <span class="status completed">
+                            Completed
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        28 Sep 2026
+                    </td>
+
+                    <td>
+                        Bank Transfer
+                    </td>
+
+                    <td>
+                        Debit
+                    </td>
+
+                    <td class="debit">
+                        -₹5,000
+                    </td>
+
+                    <td>
+
+                        <span class="status completed">
+                            Completed
+                        </span>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+
+function goBack() {
+
+    window.location.href =
+        "customer-management.html";
+
+}
+
+
+
+function viewAccount() {
+
+    window.location.href =
+        "view-account.html";
+
+}
+
+
+
+function openAccount() {
+
+    alert(
+        "Open Account feature will be connected in the next step."
+    );
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

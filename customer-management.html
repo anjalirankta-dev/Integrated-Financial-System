@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Management - Integrated Financial System</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            🏦
+            <h2>Integrated</h2>
+            <span>Financial System</span>
+        </div>
+
+        <nav>
+
+            <a href="bank-dashboard.html" class="menu-item">
+                🏠
+                <span>Dashboard</span>
+            </a>
+
+            <a href="customer-management.html" class="menu-item active">
+                👥
+                <span>Customer Management</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                💳
+                <span>Account Management</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                💰
+                <span>Transaction Management</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                📋
+                <span>Requests</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                📊
+                <span>Reports</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                👤
+                <span>Profile</span>
+            </a>
+
+            <a href="index.html" class="menu-item logout">
+                🚪
+                <span>Logout</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="search-box">
+
+                🔍
+
+                <input
+                    type="text"
+                    id="customerSearch"
+                    placeholder="Search customer by name, ID or phone..."
+                >
+
+            </div>
+
+
+            <div class="employee-info">
+
+                <div class="notification">
+                    🔔
+                </div>
+
+                <div class="employee-avatar">
+                    P
+                </div>
+
+                <div>
+                    <strong>Priya Sharma</strong>
+                    <small>Bank Employee</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE HEADER -->
+
+        <section class="page-header">
+
+            <div>
+
+                <h1>Customer Management</h1>
+
+                <p>
+                    Search, view and manage customer information.
+                </p>
+
+            </div>
+
+
+            <button class="primary-btn">
+                + Add Customer
+            </button>
+
+        </section>
+
+
+        <!-- SEARCH SECTION -->
+
+        <section class="dashboard-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>Search Customer</h2>
+
+                    <p>
+                        Find a customer using their ID, name or phone number.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="customer-search">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Enter Customer ID, Name or Phone Number"
+                >
+
+                <select id="customerStatus">
+
+                    <option value="all">
+                        All Status
+                    </option>
+
+                    <option value="active">
+                        Active
+                    </option>
+
+                    <option value="inactive">
+                        Inactive
+                    </option>
+
+                </select>
+
+
+                <button class="primary-btn" onclick="searchCustomer()">
+                    🔍 Search
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- CUSTOMER TABLE -->
+
+        <section class="dashboard-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>Customer List</h2>
+
+                    <p>
+                        Registered customers in the system.
+                    </p>
+
+                </div>
+
+                <span>
+                    1,250 Customers
+                </span>
+
+            </div>
+
+
+            <table id="customerTable">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Customer ID</th>
+
+                        <th>Name</th>
+
+                        <th>Phone</th>
+
+                        <th>Email</th>
+
+                        <th>Account Type</th>
+
+                        <th>Status</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <tr>
+
+                        <td>C001</td>
+
+                        <td>Rahul Sharma</td>
+
+                        <td>9876543210</td>
+
+                        <td>rahul@gmail.com</td>
+
+                        <td>Savings</td>
+
+                        <td>
+                            <span class="status completed">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button
+                                class="view-customer"
+                                onclick="viewCustomer('C001')"
+                            >
+                                View
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>C002</td>
+
+                        <td>Priya Singh</td>
+
+                        <td>9876501234</td>
+
+                        <td>priya@gmail.com</td>
+
+                        <td>Current</td>
+
+                        <td>
+                            <span class="status completed">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button
+                                class="view-customer"
+                                onclick="viewCustomer('C002')"
+                            >
+                                View
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>C003</td>
+
+                        <td>Amit Kumar</td>
+
+                        <td>9876512345</td>
+
+                        <td>amit@gmail.com</td>
+
+                        <td>Savings</td>
+
+                        <td>
+                            <span class="status completed">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button
+                                class="view-customer"
+                                onclick="viewCustomer('C003')"
+                            >
+                                View
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>C004</td>
+
+                        <td>Neha Gupta</td>
+
+                        <td>9876523456</td>
+
+                        <td>neha@gmail.com</td>
+
+                        <td>Savings</td>
+
+                        <td>
+                            <span class="status pending">
+                                Inactive
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button
+                                class="view-customer"
+                                onclick="viewCustomer('C004')"
+                            >
+                                View
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>C005</td>
+
+                        <td>Rohit Verma</td>
+
+                        <td>9876534567</td>
+
+                        <td>rohit@gmail.com</td>
+
+                        <td>Current</td>
+
+                        <td>
+                            <span class="status completed">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button
+                                class="view-customer"
+                                onclick="viewCustomer('C005')"
+                            >
+                                View
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function searchCustomer() {
+
+            const searchValue =
+                document.getElementById("searchInput")
+                .value
+                .toLowerCase();
+
+            const rows =
+                document.querySelectorAll("#customerTable tbody tr");
+
+
+            rows.forEach(function(row) {
+
+                const rowText =
+                    row.innerText.toLowerCase();
+
+
+                if (rowText.includes(searchValue)) {
+
+                    row.style.display = "";
+
+                } else {
+
+                    row.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+
+        function viewCustomer(customerId) {
+
+            window.location.href =
+                "view-customer.html?id=" + customerId;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

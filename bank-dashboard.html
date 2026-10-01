@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bank Employee Dashboard - Integrated Financial System</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            🏦
+            <h2>Integrated</h2>
+            <span>Financial System</span>
+        </div>
+
+        <nav>
+
+            <a href="#" class="menu-item active">
+                🏠
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                👥
+                <span>Customer Management</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                💳
+                <span>Account Management</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                💰
+                <span>Transaction Management</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                📋
+                <span>Requests</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                📊
+                <span>Reports</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                👤
+                <span>Profile</span>
+            </a>
+
+            <a href="#" class="menu-item logout">
+                🚪
+                <span>Logout</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="search-box">
+                🔍
+                <input type="text" placeholder="Search customer, account...">
+            </div>
+
+            <div class="employee-info">
+
+                <div class="notification">
+                    🔔
+                </div>
+
+                <div class="employee-avatar">
+                    P
+                </div>
+
+                <div>
+                    <strong>Priya Sharma</strong>
+                    <small>Bank Employee</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE HEADER -->
+
+        <section class="page-header">
+
+            <div>
+                <h1>Dashboard</h1>
+
+                <p>
+                    Welcome back, Priya. Here's today's banking overview.
+                </p>
+            </div>
+
+            <button class="primary-btn">
+                + New Request
+            </button>
+
+        </section>
+
+
+        <!-- ================= SUMMARY CARDS ================= -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    👥
+                </div>
+
+                <div>
+                    <p>Total Customers</p>
+                    <h2>1,250</h2>
+                    <span class="positive">+5.2% this month</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    💳
+                </div>
+
+                <div>
+                    <p>Total Accounts</p>
+                    <h2>1,480</h2>
+                    <span class="positive">+3.8% this month</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    ⏳
+                </div>
+
+                <div>
+                    <p>Pending Requests</p>
+                    <h2>25</h2>
+                    <span class="warning">Needs attention</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+                    💰
+                </div>
+
+                <div>
+                    <p>Today's Transactions</p>
+                    <h2>3,450</h2>
+                    <span class="positive">+8.4% today</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTENT GRID ================= -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- RECENT TRANSACTIONS -->
+
+            <div class="dashboard-card large">
+
+                <div class="card-header">
+
+                    <div>
+                        <h2>Recent Transactions</h2>
+                        <p>Latest customer transactions</p>
+                    </div>
+
+                    <button class="view-btn">
+                        View All
+                    </button>
+
+                </div>
+
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Customer</th>
+                            <th>Type</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Rahul Sharma</td>
+                            <td>Deposit</td>
+                            <td>₹10,000</td>
+
+                            <td>
+                                <span class="status completed">
+                                    Completed
+                                </span>
+                            </td>
+
+                            <td>01 Oct 2026</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Priya Singh</td>
+                            <td>Transfer</td>
+                            <td>₹5,000</td>
+
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                            <td>01 Oct 2026</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Amit Kumar</td>
+                            <td>Withdrawal</td>
+                            <td>₹2,000</td>
+
+                            <td>
+                                <span class="status completed">
+                                    Completed
+                                </span>
+                            </td>
+
+                            <td>30 Sep 2026</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Neha Gupta</td>
+                            <td>Deposit</td>
+                            <td>₹8,500</td>
+
+                            <td>
+                                <span class="status completed">
+                                    Completed
+                                </span>
+                            </td>
+
+                            <td>30 Sep 2026</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- QUICK ACTIONS -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h2>Quick Actions</h2>
+                        <p>Frequently used operations</p>
+                    </div>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+                    <button>
+                        👤
+                        <span>Add Customer</span>
+                    </button>
+
+                    <button>
+                        💳
+                        <span>Open Account</span>
+                    </button>
+
+                    <button>
+                        💰
+                        <span>Deposit</span>
+                    </button>
+
+                    <button>
+                        ↔️
+                        <span>Transfer</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PENDING REQUESTS ================= -->
+
+        <section class="dashboard-card">
+
+            <div class="card-header">
+
+                <div>
+                    <h2>Pending Requests</h2>
+                    <p>Requests requiring your attention</p>
+                </div>
+
+                <button class="view-btn">
+                    View All
+                </button>
+
+            </div>
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Request ID</th>
+                        <th>Customer</th>
+                        <th>Request Type</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>REQ001</td>
+
+                        <td>Rahul Sharma</td>
+
+                        <td>New Account</td>
+
+                        <td>01 Oct 2026</td>
+
+                        <td>
+
+                            <button class="approve">
+                                Approve
+                            </button>
+
+                            <button class="reject">
+                                Reject
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>REQ002</td>
+
+                        <td>Priya Singh</td>
+
+                        <td>Address Update</td>
+
+                        <td>01 Oct 2026</td>
+
+                        <td>
+
+                            <button class="approve">
+                                Approve
+                            </button>
+
+                            <button class="reject">
+                                Reject
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
